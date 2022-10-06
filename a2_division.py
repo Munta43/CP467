@@ -4,11 +4,6 @@ import numpy as np
 img1 = cv2.imread("input1.jpg")
 img2 = cv2.imread("input2.jpg")
 
-# TEST
-# using this test case will yield a white window.
-# img1 = cv2.imread("house.jpg")
-# img2 = cv2.imread("input2.jpg")
-
 # The [1::-1]  gets tuples in the order of (width and height).
 # By callign .shape we get the height, width and channel in tuples.
 # .shape gives row (height), column (width).
