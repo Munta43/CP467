@@ -1,7 +1,6 @@
 '''
 CODE IS COPIED FROM ASSIGNMENT 1 AND REUSED FOR CONVOLUTION PART IN A2
 '''
-
 import cv2
 import numpy as np
 
@@ -29,14 +28,11 @@ cv2.destroyAllWindows()  # if you press enter on the img you can proceed with th
 # filter = np.array([[-1, -4, -1], [-4, 20, -4], [-1, -4, -1]], np.float32)
 
 # TEST `4`
-filter = np.array([[0, -1, 0], [-1, 20, -1], [0, -1, 0]], np.float32)
+filter = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]], np.float32)
 
 # calculate the dimention of operation matrix
 img_col_num, img_row_num = img.shape
 filter_col_num, filter_row_num = filter.shape
-
-# create pallate for new image and adjust to prevent out of bounds error
-# THESE WERE + (not -)
 y = img_col_num-filter_col_num + 1
 x = img_row_num-filter_row_num + 1
 
