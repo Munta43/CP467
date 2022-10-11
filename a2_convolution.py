@@ -4,12 +4,12 @@ CODE IS COPIED FROM ASSIGNMENT 1 AND REUSED FOR CONVOLUTION PART IN A2
 import cv2
 import numpy as np
 
-# load image, grayscale it and define filter
+# Load image and display it.
 img = cv2.imread('house.jpg')
 cv2.imshow("original", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()  # if you press enter on the img you can proceed with the code
-
+# Change image to grayscale and then display it.
 img = cv2.cvtColor(src=img, code=cv2.COLOR_BGR2GRAY)
 cv2.imshow("gray scale", img)
 cv2.waitKey(0)
@@ -36,6 +36,7 @@ filter_col_num, filter_row_num = filter.shape
 y = img_col_num-filter_col_num + 1
 x = img_row_num-filter_row_num + 1
 
+# Create a holder for processed image.
 filtered_img = np.zeros((y, x))
 
 # iterate pixel by pixel and use convolution to apply the filter
@@ -48,13 +49,12 @@ for i in range(y):
             filtered_img[i][j] = 255
         if filtered_img[i][j] < 0:
             filtered_img[i][j] = 0
-
     # PROGRAM STATUS INDICATOR
     print("Running!!!")
-
 # PROGRAM STATUS INDICATOR
 print("DONE!")
 
+# Diplay processed image.
 cv2.imshow("Convolution", filtered_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()  # if you press enter on the img you can proceed with the code
