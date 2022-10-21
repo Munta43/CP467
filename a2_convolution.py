@@ -15,19 +15,7 @@ cv2.imshow("gray scale", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()  # if you press enter on the img you can proceed with the code
 
-# TEST `1`
-# Gives a less clear edge detection compared to the one below.
-# filter = np.array([[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]], np.float32)
-
-# TEST `2`
-# This give a more clear/sharp edge detection.
-# filter = np.array([[1, 4, 1], [4, -20, 4], [1, 4, 1]], np.float32)
-
-# TEST `3`
-# This is the opposite version of the line above.
-# filter = np.array([[-1, -4, -1], [-4, 20, -4], [-1, -4, -1]], np.float32)
-
-# TEST `4`
+# Filter being use.
 filter = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]], np.float32)
 
 # calculate the dimention of operation matrix
@@ -51,10 +39,22 @@ for i in range(y):
             filtered_img[i][j] = 0
     # PROGRAM STATUS INDICATOR
     print("Running!!!")
+
+for i in range(y):
+    for j in range(x):
+        # Re-writing the original image.
+        img[i][j] = img[i][j] + filtered_img[i][j]
+    # PROGRAM STATUS INDICATOR
+    print("Running!!!")
+
 # PROGRAM STATUS INDICATOR
 print("DONE!")
 
+cv2.imshow("test", filtered_img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
 # Diplay processed image.
-cv2.imshow("Convolution", filtered_img)
+cv2.imshow("Convolution", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()  # if you press enter on the img you can proceed with the code
