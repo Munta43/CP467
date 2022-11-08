@@ -9,6 +9,6 @@ Imports:
 -> One import that was mainly used was cv2: https://stackoverflow.com/questions/21810452/cv2-imshow-command-doesnt-work-properly-in-opencv-python
                                           : https://stackoverflow.com/questions/65509260/what-is-the-different-between-opencv-python-library-and-cv2-library
                                           
-# add more imports here
+#add more imports here
 
 
