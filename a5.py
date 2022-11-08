@@ -1,10 +1,12 @@
 from math import sqrt
 
 # Inputs
+# assumption is that both class (A, B) sizes are the same.
+# (code is based off this assumption therefore changes may be required for a flexible class size)
 classA = [[1, 1], [1, 2]]
 classB = [[2, 1], [3, 1]]
 
-
+# Minimum distance
 def dMin(classA, classB):
     min = 9999
     n = len(classA)
@@ -18,6 +20,7 @@ def dMin(classA, classB):
     return min
 
 
+# Maximum distance
 def dMax(classA, classB):
     max = -9999
     n = len(classA)
@@ -31,6 +34,7 @@ def dMax(classA, classB):
     return max
 
 
+# Average distance
 def dAvg(classA, classB):
     avg = 0
     n = len(classA)
@@ -45,6 +49,7 @@ def dAvg(classA, classB):
     return avg
 
 
+# Mean distance
 def dMean(classA, classB):
     mean = 0
     n = len(classA)
@@ -66,6 +71,7 @@ def dMean(classA, classB):
     return mean
 
 
+# Print/function calls
 print("dMin: {:.2f}".format(dMin(classA, classB)))
 print("dMax: {:.2f}".format(dMax(classA, classB)))
 print("dAvg: {:.2f}".format(dAvg(classA, classB)))
