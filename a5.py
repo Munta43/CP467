@@ -4,7 +4,7 @@ from math import sqrt
 # assumption is that both class (A, B) sizes are the same.
 # (code is based off this assumption therefore changes may be required for a flexible class size)
 classA = [[1, 1], [1, 2]]
-classB = [[2, 1], [3, 1]]
+classB = [[2, 1]]
 
 # Minimum distance
 def dMin(classA, classB):
