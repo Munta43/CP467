@@ -4,8 +4,8 @@ from math import sqrt
 classA = [[1, 1], [1, 2]]
 classB = [[2, 1], [3, 1]]
 
-# classA = [[1, 1], [1, 2]]
-# classB = [[2, 1]]
+# classA = [[1, 1], [1, 2], [2, 2]]
+# classB = [[8, 8], [9, 9]]
 
 # Minimum distance
 def dMin(classA, classB):
@@ -39,7 +39,7 @@ def dMax(classA, classB):
     return max
 
 
-# Average distance (FIX)
+# Average distance
 def dAvg(classA, classB):
     avg = 0
     lenA = len(classA)
@@ -55,7 +55,7 @@ def dAvg(classA, classB):
     return avg
 
 
-# Mean distance (FIX)
+# Mean distance
 def dMean(classA, classB):
     mean = 0
     lenA = len(classA)
